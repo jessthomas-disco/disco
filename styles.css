@@ -140,6 +140,7 @@ h1 {
 
 .content {
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0.88rem 0.88rem 6rem;
   -webkit-overflow-scrolling: touch;
 }
@@ -436,7 +437,7 @@ button.ghost {
   background: linear-gradient(0deg, #0f1522 0%, #101824 100%);
   padding: 0.52rem 0.7rem 0.75rem;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.28rem;
 }
 
@@ -723,6 +724,7 @@ button.ghost {
 
 .profile-card {
   text-align: center;
+  min-width: 0;
 }
 
 .profile-photo-wrap {
@@ -751,6 +753,52 @@ button.ghost {
   display: flex;
   align-items: center;
   gap: 0.45rem;
+}
+
+.profile-email {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.history-block + .history-block {
+  margin-top: 0.55rem;
+}
+
+.history-cards {
+  margin-top: 0.55rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.history-cards .history-block + .history-block {
+  margin-top: 0;
+}
+
+.history-card {
+  position: relative;
+  border: 1px solid #2a3550;
+  border-radius: 12px;
+  padding: 0.58rem 0.62rem;
+  background: linear-gradient(165deg, #10192b 0%, #0d1524 100%);
+  overflow: hidden;
+}
+
+.history-card .list {
+  margin-top: 0.3rem;
+}
+
+.history-year {
+  font-weight: 700;
+}
+
+.appearance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid #2a3550;
+  border-radius: 10px;
+  padding: 0.5rem 0.55rem;
 }
 
 .modal-backdrop {

@@ -27,14 +27,268 @@ const tabConfig = [
     label: "Live",
     icon: '<svg class="mono-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6.5" width="14" height="11" rx="2"></rect><path d="m16.5 10 5-3v10l-5-3z"></path></svg>',
   },
-  {
-    id: "outfits",
-    label: "Outfits",
-    icon: '<svg class="mono-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5 12 3l4 1.5v3l2.5 3L15 12l-1 8h-4l-1-8-3.5-1.5L8 7.5z"></path></svg>',
-  },
 ];
 
 const MASTER_TOUR_DATES = [
+  ["2017-09-19", "San Francisco, United States", "Live On Tour"],
+  ["2017-09-20", "Los Angeles, United States", "Live On Tour"],
+  ["2017-09-25", "Nashville, United States", "Live On Tour"],
+  ["2017-09-26", "Chicago, United States", "Live On Tour"],
+  ["2017-09-28", "New York City, United States", "Live On Tour"],
+  ["2017-09-30", "Boston, United States", "Live On Tour"],
+  ["2017-10-01", "Washington, D.C., United States", "Live On Tour"],
+  ["2017-10-04", "Toronto, Canada", "Live On Tour"],
+  ["2017-10-05", "Upper Darby, United States", "Live On Tour"],
+  ["2017-10-08", "Atlanta, United States", "Live On Tour"],
+  ["2017-10-10", "Irving, United States", "Live On Tour"],
+  ["2017-10-11", "Austin, United States", "Live On Tour"],
+  ["2017-10-14", "Phoenix, United States", "Live On Tour"],
+  ["2017-10-25", "Paris, France", "Live On Tour"],
+  ["2017-10-27", "Cologne, Germany", "Live On Tour"],
+  ["2017-10-29", "London, England", "Live On Tour"],
+  ["2017-10-30", "London, England", "Live On Tour"],
+  ["2017-11-01", "Manchester, England", "Live On Tour"],
+  ["2017-11-02", "Glasgow, Scotland", "Live On Tour"],
+  ["2017-11-05", "Stockholm, Sweden", "Live On Tour"],
+  ["2017-11-07", "Berlin, Germany", "Live On Tour"],
+  ["2017-11-08", "Amsterdam, Netherlands", "Live On Tour"],
+  ["2017-11-10", "Milan, Italy", "Live On Tour"],
+  ["2017-11-19", "Shanghai, China", "Live On Tour"],
+  ["2017-11-23", "Singapore, Singapore", "Live On Tour"],
+  ["2017-11-26", "Sydney, Australia", "Live On Tour"],
+  ["2017-11-30", "Melbourne, Australia", "Live On Tour"],
+  ["2017-12-02", "Auckland, New Zealand", "Live On Tour"],
+  ["2017-12-07", "Tokyo, Japan", "Live On Tour"],
+  ["2017-12-08", "Tokyo, Japan", "Live On Tour"],
+  ["2018-03-11", "Basel, Switzerland", "Live On Tour"],
+  ["2018-03-13", "Paris, France", "Live On Tour"],
+  ["2018-03-14", "Amsterdam, Netherlands", "Live On Tour"],
+  ["2018-03-16", "Antwerp, Belgium", "Live On Tour"],
+  ["2018-03-18", "Stockholm, Sweden", "Live On Tour"],
+  ["2018-03-19", "Copenhagen, Denmark", "Live On Tour"],
+  ["2018-03-21", "Oslo, Norway", "Live On Tour"],
+  ["2018-03-24", "Oberhausen, Germany", "Live On Tour"],
+  ["2018-03-25", "Hamburg, Germany", "Live On Tour"],
+  ["2018-03-27", "Munich, Germany", "Live On Tour"],
+  ["2018-03-30", "Barcelona, Spain", "Live On Tour"],
+  ["2018-03-31", "Madrid, Spain", "Live On Tour"],
+  ["2018-04-02", "Milan, Italy", "Live On Tour"],
+  ["2018-04-04", "Bologna, Italy", "Live On Tour"],
+  ["2018-04-05", "Mannheim, Germany", "Live On Tour"],
+  ["2018-04-07", "Birmingham, England", "Live On Tour"],
+  ["2018-04-09", "Manchester, England", "Live On Tour"],
+  ["2018-04-11", "London, England", "Live On Tour"],
+  ["2018-04-12", "London, England", "Live On Tour"],
+  ["2018-04-14", "Glasgow, Scotland", "Live On Tour"],
+  ["2018-04-16", "Dublin, Ireland", "Live On Tour"],
+  ["2018-04-21", "Perth, Australia", "Live On Tour"],
+  ["2018-04-24", "Melbourne, Australia", "Live On Tour"],
+  ["2018-04-27", "Sydney, Australia", "Live On Tour"],
+  ["2018-04-28", "Brisbane, Australia", "Live On Tour"],
+  ["2018-05-01", "Pasay, Philippines", "Live On Tour"],
+  ["2018-05-03", "Singapore, Singapore", "Live On Tour"],
+  ["2018-05-05", "Hong Kong, China", "Live On Tour"],
+  ["2018-05-07", "Bangkok, Thailand", "Live On Tour"],
+  ["2018-05-10", "Kobe, Japan", "Live On Tour"],
+  ["2018-05-12", "Chiba, Japan", "Live On Tour"],
+  ["2018-05-23", "Buenos Aires, Argentina", "Live On Tour"],
+  ["2018-05-25", "Santiago, Chile", "Live On Tour"],
+  ["2018-05-27", "Rio de Janeiro, Brazil", "Live On Tour"],
+  ["2018-05-29", "Sao Paulo, Brazil", "Live On Tour"],
+  ["2018-06-01", "Mexico City, Mexico", "Live On Tour"],
+  ["2018-06-02", "Mexico City, Mexico", "Live On Tour"],
+  ["2018-06-05", "Dallas, United States", "Live On Tour"],
+  ["2018-06-07", "Houston, United States", "Live On Tour"],
+  ["2018-06-09", "Sunrise, United States", "Live On Tour"],
+  ["2018-06-11", "Duluth, United States", "Live On Tour"],
+  ["2018-06-12", "Nashville, United States", "Live On Tour"],
+  ["2018-06-14", "Hershey, United States", "Live On Tour"],
+  ["2018-06-15", "Philadelphia, United States", "Live On Tour"],
+  ["2018-06-16", "Toronto, Canada", "Live On Tour"],
+  ["2018-06-18", "Boston, United States", "Live On Tour"],
+  ["2018-06-21", "New York City, United States", "Live On Tour"],
+  ["2018-06-22", "New York City, United States", "Live On Tour"],
+  ["2018-06-24", "Washington, D.C., United States", "Live On Tour"],
+  ["2018-06-26", "Detroit, United States", "Live On Tour"],
+  ["2018-06-27", "Indianapolis, United States", "Live On Tour"],
+  ["2018-06-30", "Chicago, United States", "Live On Tour"],
+  ["2018-07-01", "Saint Paul, United States", "Live On Tour"],
+  ["2018-07-03", "Denver, United States", "Live On Tour"],
+  ["2018-07-06", "Vancouver, Canada", "Live On Tour"],
+  ["2018-07-07", "Seattle, United States", "Live On Tour"],
+  ["2018-07-09", "Sacramento, United States", "Live On Tour"],
+  ["2018-07-11", "San Jose, United States", "Live On Tour"],
+  ["2018-07-13", "Inglewood, United States", "Live On Tour"],
+  ["2018-07-14", "Inglewood, United States", "Live On Tour"],
+  ["2021-09-04", "Paradise (Las Vegas), United States", "Love On Tour"],
+  ["2021-09-07", "Denver, United States", "Love On Tour"],
+  ["2021-09-09", "San Antonio, United States", "Love On Tour"],
+  ["2021-09-11", "Dallas, United States", "Love On Tour"],
+  ["2021-09-15", "St. Louis, United States", "Love On Tour"],
+  ["2021-09-17", "Philadelphia, United States", "Love On Tour"],
+  ["2021-09-18", "Washington, D.C., United States", "Love On Tour"],
+  ["2021-09-20", "Detroit, United States", "Love On Tour"],
+  ["2021-09-22", "Saint Paul, United States", "Love On Tour"],
+  ["2021-09-24", "Chicago, United States", "Love On Tour"],
+  ["2021-09-25", "Chicago, United States", "Love On Tour"],
+  ["2021-09-29", "Nashville, United States", "Love On Tour"],
+  ["2021-10-01", "Nashville, United States", "Love On Tour"],
+  ["2021-10-03", "New York City, United States", "Love On Tour"],
+  ["2021-10-04", "New York City, United States", "Love On Tour"],
+  ["2021-10-07", "Orlando, United States", "Love On Tour"],
+  ["2021-10-08", "Sunrise, United States", "Love On Tour"],
+  ["2021-10-10", "Tampa, United States", "Love On Tour"],
+  ["2021-10-12", "Raleigh, United States", "Love On Tour"],
+  ["2021-10-14", "Pittsburgh, United States", "Love On Tour"],
+  ["2021-10-16", "New York City, United States", "Love On Tour"],
+  ["2021-10-18", "Cleveland, United States", "Love On Tour"],
+  ["2021-10-21", "Uncasville, United States", "Love On Tour"],
+  ["2021-10-23", "Uncasville, United States", "Love On Tour"],
+  ["2021-10-25", "Boston, United States", "Love On Tour"],
+  ["2021-10-27", "Atlanta, United States", "Love On Tour"],
+  ["2021-10-28", "Atlanta, United States", "Love On Tour"],
+  ["2021-10-30", "New York City, United States", "Love On Tour"],
+  ["2021-10-31", "New York City, United States", "Love On Tour"],
+  ["2021-11-03", "Milwaukee, United States", "Love On Tour"],
+  ["2021-11-07", "Tacoma, United States", "Love On Tour"],
+  ["2021-11-08", "Portland, United States", "Love On Tour"],
+  ["2021-11-10", "Sacramento, United States", "Love On Tour"],
+  ["2021-11-11", "San Jose, United States", "Love On Tour"],
+  ["2021-11-13", "Glendale, United States", "Love On Tour"],
+  ["2021-11-15", "San Diego, United States", "Love On Tour"],
+  ["2021-11-17", "Inglewood, United States", "Love On Tour"],
+  ["2021-11-19", "Inglewood, United States", "Love On Tour"],
+  ["2021-11-20", "Inglewood, United States", "Love On Tour"],
+  ["2021-11-23", "Houston, United States", "Love On Tour"],
+  ["2021-11-24", "North Little Rock, United States", "Love On Tour"],
+  ["2021-11-28", "Elmont, United States", "Love On Tour"],
+  ["2022-06-11", "Glasgow, Scotland", "Love On Tour"],
+  ["2022-06-15", "Manchester, England", "Love On Tour"],
+  ["2022-06-16", "Manchester, England", "Love On Tour"],
+  ["2022-06-18", "London, England", "Love On Tour"],
+  ["2022-06-19", "London, England", "Love On Tour"],
+  ["2022-06-22", "Dublin, Ireland", "Love On Tour"],
+  ["2022-06-26", "Hamburg, Germany", "Love On Tour"],
+  ["2022-06-29", "Stockholm, Sweden", "Love On Tour"],
+  ["2022-07-01", "Oslo, Norway", "Love On Tour"],
+  ["2022-07-05", "Paris, France", "Love On Tour"],
+  ["2022-07-07", "Antwerp, Belgium", "Love On Tour"],
+  ["2022-07-09", "Amsterdam, Netherlands", "Love On Tour"],
+  ["2022-07-11", "Munich, Germany", "Love On Tour"],
+  ["2022-07-13", "Budapest, Hungary", "Love On Tour"],
+  ["2022-07-15", "Prague, Czech Republic", "Love On Tour"],
+  ["2022-07-16", "Vienna, Austria", "Love On Tour"],
+  ["2022-07-18", "Krakow, Poland", "Love On Tour"],
+  ["2022-07-20", "Berlin, Germany", "Love On Tour"],
+  ["2022-07-22", "Cologne, Germany", "Love On Tour"],
+  ["2022-07-25", "Bologna, Italy", "Love On Tour"],
+  ["2022-07-26", "Turin, Italy", "Love On Tour"],
+  ["2022-07-29", "Madrid, Spain", "Love On Tour"],
+  ["2022-07-31", "Lisbon, Portugal", "Love On Tour"],
+  ["2022-08-15", "Toronto, Canada", "Love On Tour"],
+  ["2022-08-16", "Toronto, Canada", "Love On Tour"],
+  ["2022-08-20", "New York City, United States", "Love On Tour"],
+  ["2022-08-21", "New York City, United States", "Love On Tour"],
+  ["2022-08-22", "New York City, United States", "Love On Tour"],
+  ["2022-08-26", "New York City, United States", "Love On Tour"],
+  ["2022-08-27", "New York City, United States", "Love On Tour"],
+  ["2022-08-28", "New York City, United States", "Love On Tour"],
+  ["2022-09-01", "New York City, United States", "Love On Tour"],
+  ["2022-09-02", "New York City, United States", "Love On Tour"],
+  ["2022-09-03", "New York City, United States", "Love On Tour"],
+  ["2022-09-07", "New York City, United States", "Love On Tour"],
+  ["2022-09-08", "New York City, United States", "Love On Tour"],
+  ["2022-09-10", "New York City, United States", "Love On Tour"],
+  ["2022-09-14", "New York City, United States", "Love On Tour"],
+  ["2022-09-15", "New York City, United States", "Love On Tour"],
+  ["2022-09-21", "New York City, United States", "Love On Tour"],
+  ["2022-09-25", "Austin, United States", "Love On Tour"],
+  ["2022-09-26", "Austin, United States", "Love On Tour"],
+  ["2022-09-28", "Austin, United States", "Love On Tour"],
+  ["2022-09-29", "Austin, United States", "Love On Tour"],
+  ["2022-10-02", "Austin, United States", "Love On Tour"],
+  ["2022-10-03", "Austin, United States", "Love On Tour"],
+  ["2022-10-08", "Chicago, United States", "Love On Tour"],
+  ["2022-10-09", "Chicago, United States", "Love On Tour"],
+  ["2022-10-10", "Chicago, United States", "Love On Tour"],
+  ["2022-10-13", "Chicago, United States", "Love On Tour"],
+  ["2022-10-14", "Chicago, United States", "Love On Tour"],
+  ["2022-10-15", "Chicago, United States", "Love On Tour"],
+  ["2022-10-23", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-10-24", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-10-26", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-10-28", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-10-29", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-10-31", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-02", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-09", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-11", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-12", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-14", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-15", "Inglewood (Los Angeles Area), United States", "Love On Tour"],
+  ["2022-11-20", "Guadalajara, Mexico", "Love On Tour"],
+  ["2022-11-22", "Monterrey, Mexico", "Love On Tour"],
+  ["2022-11-24", "Mexico City, Mexico", "Love On Tour"],
+  ["2022-11-25", "Mexico City, Mexico", "Love On Tour"],
+  ["2022-11-27", "Bogota, Colombia", "Love On Tour"],
+  ["2022-11-29", "Lima, Peru", "Love On Tour"],
+  ["2022-12-01", "Santiago, Chile", "Love On Tour"],
+  ["2022-12-03", "Buenos Aires, Argentina", "Love On Tour"],
+  ["2022-12-04", "Buenos Aires, Argentina", "Love On Tour"],
+  ["2022-12-06", "Sao Paulo, Brazil", "Love On Tour"],
+  ["2022-12-08", "Rio de Janeiro, Brazil", "Love On Tour"],
+  ["2022-12-10", "Curitiba, Brazil", "Love On Tour"],
+  ["2022-12-13", "Sao Paulo, Brazil", "Love On Tour"],
+  ["2022-12-14", "Sao Paulo, Brazil", "Love On Tour"],
+  ["2023-01-26", "Inglewood, United States", "Love On Tour"],
+  ["2023-01-27", "Inglewood, United States", "Love On Tour"],
+  ["2023-01-29", "Inglewood, United States", "Love On Tour"],
+  ["2023-01-31", "Thousand Palms, United States", "Love On Tour"],
+  ["2023-02-01", "Thousand Palms, United States", "Love On Tour"],
+  ["2023-02-20", "Perth, Australia", "Love On Tour"],
+  ["2023-02-24", "Melbourne, Australia", "Love On Tour"],
+  ["2023-02-25", "Melbourne, Australia", "Love On Tour"],
+  ["2023-02-28", "Gold Coast, Australia", "Love On Tour"],
+  ["2023-03-03", "Sydney, Australia", "Love On Tour"],
+  ["2023-03-04", "Sydney, Australia", "Love On Tour"],
+  ["2023-03-07", "Auckland, New Zealand", "Love On Tour"],
+  ["2023-03-11", "Bangkok, Thailand", "Love On Tour"],
+  ["2023-03-14", "Bocaue, Philippines", "Love On Tour"],
+  ["2023-03-17", "Singapore, Singapore", "Love On Tour"],
+  ["2023-03-20", "Seoul, South Korea", "Love On Tour"],
+  ["2023-03-24", "Tokyo, Japan", "Love On Tour"],
+  ["2023-03-25", "Tokyo, Japan", "Love On Tour"],
+  ["2023-05-13", "Horsens, Denmark", "Love On Tour"],
+  ["2023-05-14", "Horsens, Denmark", "Love On Tour"],
+  ["2023-05-17", "Munich, Germany", "Love On Tour"],
+  ["2023-05-18", "Munich, Germany", "Love On Tour"],
+  ["2023-05-22", "Coventry, England", "Love On Tour"],
+  ["2023-05-23", "Coventry, England", "Love On Tour"],
+  ["2023-05-26", "Edinburgh, Scotland", "Love On Tour"],
+  ["2023-05-27", "Edinburgh, Scotland", "Love On Tour"],
+  ["2023-06-01", "Saint-Denis, France", "Love On Tour"],
+  ["2023-06-02", "Saint-Denis, France", "Love On Tour"],
+  ["2023-06-04", "Amsterdam, Netherlands", "Love On Tour"],
+  ["2023-06-05", "Amsterdam, Netherlands", "Love On Tour"],
+  ["2023-06-06", "Amsterdam, Netherlands", "Love On Tour"],
+  ["2023-06-10", "Slane, Ireland", "Love On Tour"],
+  ["2023-06-13", "London, England", "Love On Tour"],
+  ["2023-06-14", "London, England", "Love On Tour"],
+  ["2023-06-16", "London, England", "Love On Tour"],
+  ["2023-06-17", "London, England", "Love On Tour"],
+  ["2023-06-20", "Cardiff, Wales", "Love On Tour"],
+  ["2023-06-21", "Cardiff, Wales", "Love On Tour"],
+  ["2023-06-24", "Werchter, Belgium", "Love On Tour"],
+  ["2023-06-27", "Dusseldorf, Germany", "Love On Tour"],
+  ["2023-06-28", "Dusseldorf, Germany", "Love On Tour"],
+  ["2023-07-02", "Warsaw, Poland", "Love On Tour"],
+  ["2023-07-05", "Frankfurt, Germany", "Love On Tour"],
+  ["2023-07-06", "Frankfurt, Germany", "Love On Tour"],
+  ["2023-07-08", "Vienna, Austria", "Love On Tour"],
+  ["2023-07-12", "Barcelona, Spain", "Love On Tour"],
+  ["2023-07-14", "Madrid, Spain", "Love On Tour"],
+  ["2023-07-18", "Lisbon, Portugal", "Love On Tour"],
+  ["2023-07-22", "Reggio Emilia, Italy", "Love On Tour"],
   ["2026-03-06", "Manchester, UK", "Co-op Live"],
   ["2026-05-16", "Amsterdam, Netherlands", "Johan Cruijff Arena"],
   ["2026-05-17", "Amsterdam, Netherlands", "Johan Cruijff Arena"],
@@ -144,6 +398,72 @@ const OFFICIAL_FEED = [
   },
 ];
 
+const DEMO_PROFILE = {
+  displayName: "Disco Fan",
+  city: "Los Angeles, US",
+  pronouns: "she/her",
+  showGoingPublic: false,
+  ticketStatus: "has",
+  photoUrl: "",
+  photoData: "",
+};
+
+const DEMO_SHOW_HISTORY = {
+  "2023": {
+    tour: "Love On Tour",
+    entries: [
+      "Inglewood N1",
+      "Thousand Palms N1",
+      "Thousand Palms N2",
+      "Lisbon, Portugal",
+      "Reggio Emilia, Italy",
+    ],
+  },
+  "2022": {
+    tour: "Love On Tour",
+    entries: ["Coachella", "New York City ONO", "Inglewood Residency (9 shows)"],
+  },
+  "2021": {
+    tour: "Love On Tour",
+    entries: [
+      "Paradise (Las Vegas)",
+      "Harryween NYC N1",
+      "Harryween NYC N2",
+      "Sacramento",
+      "San Jose",
+      "San Diego",
+      "Arizona",
+      "Inglewood N1",
+      "Inglewood N2",
+      "Inglewood N3",
+    ],
+  },
+  "2019": {
+    tour: "One Night Only",
+    entries: ["ONO LA"],
+  },
+  "2018": {
+    tour: "Live On Tour",
+    entries: ["Vancouver", "Seattle", "Sacramento", "San Jose", "LA N1", "LA N2"],
+  },
+  "2017": {
+    tour: "Live On Tour",
+    entries: [
+      "Sirius XM",
+      "Troubadour",
+      "Grammy Museum",
+      "San Fran",
+      "LA",
+      "Boston",
+      "Cancer Show Hollywood Bowl",
+      "London N1",
+      "London N2",
+      "Manchester",
+      "Glasgow",
+    ],
+  },
+};
+
 const masterShows = MASTER_TOUR_DATES.map(([date, city, venue]) => ({
   id: crypto.randomUUID(),
   city,
@@ -161,10 +481,12 @@ const state = {
   attendedShowIds: [],
   favoriteOutfitIds: [],
   favoriteSetlistShowIds: [],
+  appearances: [],
   profile: null,
   outfitFilters: { color: "", city: "" },
   calendarMonth: "",
   feedMedia: load("officialFeedMedia", {}),
+  profileEditing: false,
   activeTab: "tour",
   auth: {
     client: null,
@@ -314,6 +636,13 @@ function getShowNightLabel(show) {
   return `${shortCity} N${night}`;
 }
 
+function getTourNameFromDate(dateString) {
+  const year = Number(dateString.slice(0, 4));
+  if (year <= 2018) return "Live On Tour";
+  if (year <= 2024) return "Love On Tour";
+  return "Together Together";
+}
+
 async function hydrateOfficialFeedMedia() {
   const updates = { ...state.feedMedia };
 
@@ -371,7 +700,8 @@ function applyUserScopedState() {
   state.attendedShowIds = loadScoped("attendedShowIds");
   state.favoriteOutfitIds = loadScoped("favoriteOutfitIds");
   state.favoriteSetlistShowIds = loadScoped("favoriteSetlistShowIds");
-  state.profile = { ...defaultProfile(), ...loadScoped("profile", {}) };
+  state.appearances = loadScoped("appearances");
+  state.profile = { ...defaultProfile(), ...DEMO_PROFILE, ...loadScoped("profile", {}) };
 }
 
 function clearUserScopedState() {
@@ -1200,14 +1530,165 @@ function renderProfile() {
   if (!state.profile) state.profile = defaultProfile();
   const ticketStatus = state.profile.ticketStatus || "none";
   const profileImage = state.profile.photoData || state.profile.photoUrl;
+  const displayName = state.profile.displayName || "Add your name";
+  const displayCity = state.profile.city || "Add your city";
+  const displayPronouns = state.profile.pronouns || "Add pronouns";
+  const ticketLabel =
+    ticketStatus === "has"
+      ? "I have tickets"
+      : ticketStatus === "searching"
+        ? "Searching for tickets"
+        : "Prefer not to say";
 
   const goingList = sortedShows()
     .filter((show) => state.goingShowIds.includes(show.id))
     .map((show) => `<li>${getShowNightLabel(show)} - ${formatDate(show.date)}</li>`)
     .join("");
+  const appearancesSorted = state.appearances
+    .slice()
+    .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+  const appearanceListMarkup = appearancesSorted
+    .map(
+      (item) => `
+      <li>
+        <strong>${item.title}</strong>
+        <span class="meta"> · ${item.location || "Location not set"} · ${
+          item.date ? formatDate(item.date) : "Date not set"
+        }</span>
+      </li>`
+    )
+    .join("");
+
+  const attendedShows = sortedShows().filter((show) => state.attendedShowIds.includes(show.id));
+  const attendedByYear = attendedShows.reduce((acc, show) => {
+    const year = show.date.slice(0, 4);
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(show);
+    return acc;
+  }, {});
+  const attendedHistoryMarkup = Object.keys(attendedByYear)
+    .sort((a, b) => a.localeCompare(b))
+    .map((year) => {
+      const tourNames = Array.from(
+        new Set(attendedByYear[year].map((show) => getTourNameFromDate(show.date)))
+      ).join(" / ");
+      const entries = attendedByYear[year]
+        .map((show) => `<li>${getShowNightLabel(show)} - ${formatDate(show.date)}</li>`)
+        .join("");
+      return `
+        <div class="history-block history-card">
+          <p class="meta history-year">${year} · ${tourNames}</p>
+          <ul class="list">${entries}</ul>
+        </div>
+      `;
+    })
+    .join("");
+  const demoHistoryMarkup = Object.keys(DEMO_SHOW_HISTORY)
+    .sort((a, b) => a.localeCompare(b))
+    .map((year) => {
+      const group = DEMO_SHOW_HISTORY[year];
+      const entries = group.entries.map((item) => `<li>${item}</li>`).join("");
+      return `
+        <div class="history-block history-card">
+          <p class="meta history-year">${year} · ${group.tour}</p>
+          <ul class="list">${entries}</ul>
+        </div>
+      `;
+    })
+    .join("");
+
+  if (!state.profileEditing) {
+    el.innerHTML = `
+      <div class="section-head">
+        <h2>MY PROFILE</h2>
+        <button id="editProfileButton" class="ghost" type="button">Edit</button>
+      </div>
+      <div class="card profile-card">
+        <div class="profile-photo-wrap">
+          ${
+            profileImage
+              ? `<img class="profile-photo" src="${profileImage}" alt="Profile photo" />`
+              : '<div class="profile-photo placeholder">🪩</div>'
+          }
+        </div>
+        <h3>${displayName}</h3>
+        <p class="meta">${displayCity}</p>
+        <p class="meta">${displayPronouns}</p>
+        <p class="meta profile-email">${state.auth.user?.email || "Guest mode (saved on this device)"}</p>
+      </div>
+      <div class="card">
+        <h3>Profile Settings</h3>
+        <p class="meta">Ticket status: ${ticketLabel}</p>
+        <p class="meta">Show my upcoming shows publicly: ${state.profile.showGoingPublic ? "Yes" : "No"}</p>
+      </div>
+      <div class="card">
+        <h3>Show History</h3>
+        <div class="history-cards">
+          ${
+          attendedHistoryMarkup
+            ? attendedHistoryMarkup
+            : demoHistoryMarkup
+          }
+        </div>
+      </div>
+      <div class="card">
+        <h3>Appearances You've Seen</h3>
+        <ul class="list">
+          ${
+            appearanceListMarkup
+              ? appearanceListMarkup
+              : "<li>No appearances added yet.</li>"
+          }
+        </ul>
+      </div>
+      ${
+        state.profile.showGoingPublic
+          ? `<div class="card"><h3>My Upcoming Shows</h3><ul class="list">${goingList || "<li>No shows selected yet.</li>"}</ul></div>`
+          : ""
+      }
+      <div class="stack">
+        ${state.auth.user ? '<button id="profileSignOut" class="ghost" type="button">Sign out</button>' : ""}
+        ${
+          !state.auth.user
+            ? '<button id="openAuthFromProfile" class="ghost" type="button">Sign in / Sign up to sync profile</button>'
+            : ""
+        }
+      </div>
+    `;
+
+    document.querySelector("#editProfileButton").onclick = () => {
+      state.profileEditing = true;
+      renderProfile();
+    };
+
+    const signOut = document.querySelector("#profileSignOut");
+    if (signOut) {
+      signOut.onclick = async () => {
+        if (!state.auth.client) return;
+        await state.auth.client.auth.signOut();
+        state.activeTab = "tour";
+        state.auth.modalOpen = false;
+        state.auth.message = "Signed out.";
+        render();
+      };
+    }
+
+    const openAuth = document.querySelector("#openAuthFromProfile");
+    if (openAuth) {
+      openAuth.onclick = () => {
+        state.auth.modalOpen = true;
+        state.auth.message = "Sign in to sync your profile across devices.";
+        renderAuthUI();
+      };
+    }
+    return;
+  }
 
   el.innerHTML = `
-    <h2>MY PROFILE</h2>
+    <div class="section-head">
+      <h2>EDIT PROFILE</h2>
+      <button id="cancelEditProfile" class="ghost" type="button">Cancel</button>
+    </div>
     <div class="card profile-card">
       <div class="profile-photo-wrap">
         ${
@@ -1216,7 +1697,7 @@ function renderProfile() {
             : '<div class="profile-photo placeholder">🪩</div>'
         }
       </div>
-      <p class="meta">${state.auth.user?.email || "Guest mode (saved on this device)"}</p>
+      <p class="meta profile-email">${state.auth.user?.email || "Guest mode (saved on this device)"}</p>
     </div>
 
     <form id="profileForm" class="card form-grid">
@@ -1256,6 +1737,46 @@ function renderProfile() {
       <button class="primary" type="submit">Save profile</button>
     </form>
 
+    <div class="card form-grid">
+      <h3>Appearances You've Seen</h3>
+      <form id="appearanceForm" class="form-grid">
+        <div class="form-group">
+          <label>Appearance/Event</label>
+          <input name="title" placeholder="e.g. SNL performance taping" required />
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input name="location" placeholder="e.g. New York, NY" />
+        </div>
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" name="date" />
+        </div>
+        <button class="primary" type="submit">Add appearance</button>
+      </form>
+      <div class="stack">
+        ${
+          appearancesSorted.length
+            ? appearancesSorted
+                .map(
+                  (item) => `
+                  <div class="appearance-row">
+                    <div>
+                      <p><strong>${item.title}</strong></p>
+                      <p class="meta">${item.location || "Location not set"}${
+                        item.date ? ` · ${formatDate(item.date)}` : ""
+                      }</p>
+                    </div>
+                    <button class="ghost remove-appearance" type="button" data-appearance-id="${item.id}">Remove</button>
+                  </div>
+                `
+                )
+                .join("")
+            : '<p class="meta">No appearances added yet.</p>'
+        }
+      </div>
+    </div>
+
     ${
       state.profile.showGoingPublic
         ? `<div class="card"><h3>My Upcoming Shows</h3><ul class="list">${goingList || "<li>No shows selected yet.</li>"}</ul></div>`
@@ -1293,6 +1814,44 @@ function renderProfile() {
     };
 
     saveScoped("profile", state.profile);
+    state.profileEditing = false;
+    renderProfile();
+  };
+
+  const appearanceForm = document.querySelector("#appearanceForm");
+  if (appearanceForm) {
+    appearanceForm.onsubmit = (event) => {
+      event.preventDefault();
+      const fd = new FormData(event.target);
+      const title = String(fd.get("title") || "").trim();
+      if (!title) return;
+
+      state.appearances = [
+        ...state.appearances,
+        {
+          id: crypto.randomUUID(),
+          title,
+          location: String(fd.get("location") || "").trim(),
+          date: String(fd.get("date") || "").trim(),
+        },
+      ];
+      saveScoped("appearances", state.appearances);
+      renderProfile();
+    };
+  }
+
+  document.querySelectorAll(".remove-appearance").forEach((button) => {
+    button.onclick = () => {
+      const id = button.getAttribute("data-appearance-id");
+      if (!id) return;
+      state.appearances = state.appearances.filter((item) => item.id !== id);
+      saveScoped("appearances", state.appearances);
+      renderProfile();
+    };
+  });
+
+  document.querySelector("#cancelEditProfile").onclick = () => {
+    state.profileEditing = false;
     renderProfile();
   };
 
@@ -1326,7 +1885,6 @@ function render() {
   renderCountdowns();
   renderSetlists();
   renderLiveWatch();
-  renderOutfitVault();
   renderProfile();
   renderAuthUI();
   startCountdownTicker();
