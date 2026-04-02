@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DISCOTIME Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="admin-shell">
+      <header class="admin-topbar">
+        <div>
+          <p class="eyebrow">DISCOTIME Control</p>
+          <h1>Admin Panel</h1>
+        </div>
+        <div class="admin-topbar-actions">
+          <span id="adminUserBadge" class="admin-user-badge hidden"></span>
+          <button id="adminSignOut" class="ghost hidden" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <section id="adminNotice" class="status-banner hidden"></section>
+
+        <section id="adminLoginCard" class="admin-card auth-card">
+          <h2>Secure Admin Login</h2>
+          <p class="meta">Sign in with your admin account. Access is granted only to users flagged as admins in Supabase.</p>
+          <form id="adminLoginForm" class="admin-form">
+            <label>
+              <span>Email</span>
+              <input id="adminEmail" type="email" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input id="adminPassword" type="password" minlength="6" required />
+            </label>
+            <div class="form-actions">
+              <button id="adminLoginSubmit" class="primary" type="submit">Sign in</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="adminApp" class="hidden">
+          <nav class="admin-nav">
+            <button type="button" class="admin-nav-item active" data-admin-view="shows">Tonight</button>
+            <button type="button" class="admin-nav-item" data-admin-view="livestreams">Livestreams</button>
+            <button type="button" class="admin-nav-item" data-admin-view="polls">Prediction Polls</button>
+            <button type="button" class="admin-nav-item" data-admin-view="updates">Official Updates</button>
+            <button type="button" class="admin-nav-item" data-admin-view="reports">Reports</button>
+          </nav>
+
+          <section id="adminView-shows" class="admin-view"></section>
+          <section id="adminView-livestreams" class="admin-view hidden"></section>
+          <section id="adminView-polls" class="admin-view hidden"></section>
+          <section id="adminView-updates" class="admin-view hidden"></section>
+          <section id="adminView-reports" class="admin-view hidden"></section>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Local browser testing only. Keep these aligned with index.html.
+      window.__SUPABASE_URL__ = "https://tnoexvjeidualbmpdvwc.supabase.co";
+      window.__SUPABASE_ANON_KEY__ = "sb_publishable_1XA_JHvYa8MpJQvgONidEA_THJw1Wbk";
+    </script>
+    <script src="admin.js"></script>
+  </body>
+</html>
